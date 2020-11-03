@@ -1,6 +1,6 @@
 ﻿namespace Jcon_Contact_Tracing
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.txtboxInput = new System.Windows.Forms.TextBox();
             this.lblResult = new System.Windows.Forms.Label();
             this.lstboxResults = new System.Windows.Forms.ListBox();
