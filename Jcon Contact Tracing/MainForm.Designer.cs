@@ -53,7 +53,7 @@
             this.txtboxInput.Location = new System.Drawing.Point(12, 77);
             this.txtboxInput.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtboxInput.Name = "txtboxInput";
-            this.txtboxInput.Size = new System.Drawing.Size(378, 41);
+            this.txtboxInput.Size = new System.Drawing.Size(378, 49);
             this.txtboxInput.TabIndex = 0;
             this.txtboxInput.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtboxInput_KeyDown);
             // 
@@ -64,10 +64,9 @@
             this.lblResult.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(241)))), ((int)(((byte)(227)))));
             this.lblResult.Location = new System.Drawing.Point(12, 132);
             this.lblResult.Name = "lblResult";
-            this.lblResult.Size = new System.Drawing.Size(84, 28);
+            this.lblResult.Size = new System.Drawing.Size(100, 37);
             this.lblResult.TabIndex = 1;
-            this.lblResult.Text = "label1";
-            this.lblResult.Visible = false;
+            this.lblResult.Text = "Result";
             // 
             // lstboxResults
             // 
@@ -75,12 +74,11 @@
             this.lstboxResults.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstboxResults.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(236)))), ((int)(((byte)(238)))));
             this.lstboxResults.FormattingEnabled = true;
-            this.lstboxResults.ItemHeight = 19;
+            this.lstboxResults.ItemHeight = 23;
             this.lstboxResults.Location = new System.Drawing.Point(12, 174);
             this.lstboxResults.Name = "lstboxResults";
-            this.lstboxResults.Size = new System.Drawing.Size(378, 156);
+            this.lstboxResults.Size = new System.Drawing.Size(378, 142);
             this.lstboxResults.TabIndex = 2;
-            this.lstboxResults.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lstboxResults_MouseDoubleClick);
             // 
             // txtboxResultNote
             // 
@@ -93,7 +91,6 @@
             this.txtboxResultNote.Name = "txtboxResultNote";
             this.txtboxResultNote.Size = new System.Drawing.Size(352, 151);
             this.txtboxResultNote.TabIndex = 3;
-            this.txtboxResultNote.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtboxResultNote_KeyDown);
             // 
             // btnSubmit
             // 
@@ -107,16 +104,15 @@
             this.btnSubmit.TabIndex = 4;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = false;
-            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // lblCurrentResult
             // 
             this.lblCurrentResult.AutoSize = true;
             this.lblCurrentResult.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCurrentResult.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(241)))), ((int)(((byte)(227)))));
-            this.lblCurrentResult.Location = new System.Drawing.Point(111, 13);
+            this.lblCurrentResult.Location = new System.Drawing.Point(151, 13);
             this.lblCurrentResult.Name = "lblCurrentResult";
-            this.lblCurrentResult.Size = new System.Drawing.Size(135, 23);
+            this.lblCurrentResult.Size = new System.Drawing.Size(171, 28);
             this.lblCurrentResult.TabIndex = 1;
             this.lblCurrentResult.Text = "Current Result";
             // 
@@ -132,7 +128,6 @@
             this.btnAdd.TabIndex = 4;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnTakeNote
             // 
@@ -146,7 +141,6 @@
             this.btnTakeNote.TabIndex = 4;
             this.btnTakeNote.Text = "Take Note";
             this.btnTakeNote.UseVisualStyleBackColor = false;
-            this.btnTakeNote.Click += new System.EventHandler(this.btnTakeNote_Click);
             // 
             // panel1
             // 
@@ -166,7 +160,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(121)))));
             this.label1.Location = new System.Drawing.Point(12, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 23);
+            this.label1.Size = new System.Drawing.Size(115, 28);
             this.label1.TabIndex = 1;
             this.label1.Text = "Notepad";
             // 
@@ -177,20 +171,19 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(210)))), ((int)(((byte)(211)))));
             this.label2.Location = new System.Drawing.Point(6, 12);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(329, 36);
+            this.label2.Size = new System.Drawing.Size(419, 44);
             this.label2.TabIndex = 1;
             this.label2.Text = "J Con Contact Tracing";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(346, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(422, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(52, 48);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // picSaveData
             // 
@@ -201,14 +194,13 @@
             this.picSaveData.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picSaveData.TabIndex = 6;
             this.picSaveData.TabStop = false;
-            this.picSaveData.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // Form1
+            // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
-            this.ClientSize = new System.Drawing.Size(401, 632);
+            this.ClientSize = new System.Drawing.Size(486, 632);
             this.Controls.Add(this.picSaveData);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
@@ -224,7 +216,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.Text = "Jcon Contact Tracing";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
