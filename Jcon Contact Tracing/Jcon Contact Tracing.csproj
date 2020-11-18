@@ -80,8 +80,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Documents\Visual Studio 2019\My Library\LTXJconLibrary\LTXJconLibrary.csproj">
-      <Project>{bcb57057-0cb4-4513-a806-90069055316c}</Project>
+    <ProjectReference Include="..\..\..\..\Documents\Visual Studio 2019\My Library\LTXJconLibrary\LTXJconLibrary.csproj">
+      <Project>{c7550b02-884a-4c1d-8c70-5db6704b4a48}</Project>
       <Name>LTXJconLibrary</Name>
     </ProjectReference>
   </ItemGroup>

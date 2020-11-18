@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jcon Contact Tracing", "Jcon Contact Tracing\Jcon Contact Tracing.csproj", "{2C46D39C-3A5B-4B78-A641-FF088B022B49}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LTXJconLibrary", "..\..\Documents\Visual Studio 2019\My Library\LTXJconLibrary\LTXJconLibrary.csproj", "{BCB57057-0CB4-4513-A806-90069055316C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LTXJconLibrary", "..\..\..\Documents\Visual Studio 2019\My Library\LTXJconLibrary\LTXJconLibrary.csproj", "{C7550B02-884A-4C1D-8C70-5DB6704B4A48}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{2C46D39C-3A5B-4B78-A641-FF088B022B49}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C46D39C-3A5B-4B78-A641-FF088B022B49}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C46D39C-3A5B-4B78-A641-FF088B022B49}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BCB57057-0CB4-4513-A806-90069055316C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BCB57057-0CB4-4513-A806-90069055316C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BCB57057-0CB4-4513-A806-90069055316C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BCB57057-0CB4-4513-A806-90069055316C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7550B02-884A-4C1D-8C70-5DB6704B4A48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7550B02-884A-4C1D-8C70-5DB6704B4A48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7550B02-884A-4C1D-8C70-5DB6704B4A48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7550B02-884A-4C1D-8C70-5DB6704B4A48}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
