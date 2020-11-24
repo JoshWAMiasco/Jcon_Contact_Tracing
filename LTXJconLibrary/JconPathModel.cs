@@ -98,8 +98,24 @@ namespace LTXJconLibrary
             JconPathModel unknown = new JconPathModel();
 
             unknown.TableName = unknownObject.Substring(0, 4);
-            unknown.JconColumn = Convert.ToChar(unknownObject.Substring(5, 1));
-            unknown.JconRow = Convert.ToByte(unknownObject.Substring(7, unknownObject.Length - 7));
+            try
+            {
+                unknown.JconColumn = Convert.ToChar(unknownObject.Substring(5, 1));
+            }
+            catch
+            {
+                unknown.JconColumn = 'I';
+            }
+
+            try
+            {
+                unknown.JconRow = Convert.ToByte(unknownObject.Substring(7, unknownObject.Length - 7));
+            }
+            catch
+            {
+                unknown.JconRow = 200;
+            }
+            
 
             if(unknown.jcontablename != "Not Found" && unknown.jconcolumn != 'I' && unknown.jconrow != 255)
             {
@@ -110,9 +126,11 @@ namespace LTXJconLibrary
             }
             else
             {
-                JconTableName = "Invalid";
-                JconColumn = 'I';
-                JconRow = 255;
+
+                JconTableName = unknown.jcontablename == "Not Found"? "Not Found" : unknown.jcontablename;
+                JconColumn = unknown.jconcolumn == 'I' ? 'I' : unknown.jconcolumn;
+                JconRow = unknown.jconrow == 255 ? (byte)255 : unknown.jconrow;
+                JconRow = unknown.jconrow == 200 ? (byte)200 : unknown.jconrow;
                 return false;
             }
             

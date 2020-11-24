@@ -211,6 +211,7 @@
             // 
             this.listError.ForeColor = System.Drawing.Color.Red;
             this.listError.FormattingEnabled = true;
+            this.listError.HorizontalScrollbar = true;
             this.listError.ItemHeight = 20;
             this.listError.Location = new System.Drawing.Point(18, 136);
             this.listError.Name = "listError";
