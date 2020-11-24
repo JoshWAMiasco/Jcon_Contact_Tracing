@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="LTX Jcon Table&#xD;&#xA;Version 1&#xD;&#xA;11/24/2020">
+    <Position X="5.833" Y="1.333" Height="1.1" Width="1.792" />
+  </Comment>
+  <Class Name="LTXJconLibrary.JconTable">
+    <Position X="0.5" Y="0.5" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Nested Types" Collapsed="false" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="LTXJconLibrary.JconTable.Column">
+        <TypeIdentifier>
+          <NewMemberFileName>JconTable.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="LTXJconLibrary.JconTable.Row">
+        <TypeIdentifier>
+          <NewMemberFileName>JconTable.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="LTXJconLibrary.JconTable.JconTableNames">
+        <Compartments>
+          <Compartment Name="Nested Types" Collapsed="false" />
+        </Compartments>
+        <TypeIdentifier>
+          <NewMemberFileName>JconTable.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIACAAAAAOA=</HashCode>
+      <FileName>JconTable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LTXJconLibrary.JconPath">
+    <Position X="4" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>JconPath.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LTXJconLibrary.SystemBoard">
+    <Position X="4" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>SystemBoard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LTXJconLibrary.JconPathModel">
+    <Position X="4" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAEAAAAAAAAAACAAAAAAgAABAAAAAAAAAAQIAAAA=</HashCode>
+      <FileName>JconPathModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
