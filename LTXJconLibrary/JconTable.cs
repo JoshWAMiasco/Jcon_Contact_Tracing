@@ -247,19 +247,19 @@ namespace LTXJconLibrary
         };
 
 
-        protected enum Column: byte
+        public enum Column: byte
         {
             A, B, C, D,
             MaxLength = 4,
         }
 
-        protected enum Row: byte
+        public enum Row: byte
         {
            MaxJ1 = 60,  // maximum length for J100, J101, J102, J103
            MaxJ2 = 25,   // maximum length for J201, J203
         }
 
-       protected enum JconTableNames
+       public enum JconTableNames
         {
                 J100,J101,J102,J103,
                 J201,J203

@@ -59,10 +59,8 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserData\JconPathModel.cs" />
-    <Compile Include="UserData\SystemBoardModel.cs" />
     <Compile Include="UserData\UnknownModel.cs" />
     <Compile Include="Validator\JconPathValidator.cs" />
-    <Compile Include="Validator\SystemBoardValidator.cs" />
     <Compile Include="Validator\UnknownValidator.cs" />
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

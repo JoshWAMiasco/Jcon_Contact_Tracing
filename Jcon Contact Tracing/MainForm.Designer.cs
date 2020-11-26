@@ -55,7 +55,7 @@
             this.txtboxInput.Location = new System.Drawing.Point(18, 73);
             this.txtboxInput.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtboxInput.Name = "txtboxInput";
-            this.txtboxInput.Size = new System.Drawing.Size(422, 49);
+            this.txtboxInput.Size = new System.Drawing.Size(422, 41);
             this.txtboxInput.TabIndex = 0;
             this.txtboxInput.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtboxInput_KeyDown);
             // 
@@ -66,7 +66,7 @@
             this.lblResult.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(241)))), ((int)(((byte)(227)))));
             this.lblResult.Location = new System.Drawing.Point(457, 78);
             this.lblResult.Name = "lblResult";
-            this.lblResult.Size = new System.Drawing.Size(100, 37);
+            this.lblResult.Size = new System.Drawing.Size(79, 28);
             this.lblResult.TabIndex = 1;
             this.lblResult.Text = "Result";
             // 
@@ -76,10 +76,10 @@
             this.lstboxSearchItems.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstboxSearchItems.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(236)))), ((int)(((byte)(238)))));
             this.lstboxSearchItems.FormattingEnabled = true;
-            this.lstboxSearchItems.ItemHeight = 23;
+            this.lstboxSearchItems.ItemHeight = 19;
             this.lstboxSearchItems.Location = new System.Drawing.Point(17, 212);
             this.lstboxSearchItems.Name = "lstboxSearchItems";
-            this.lstboxSearchItems.Size = new System.Drawing.Size(423, 257);
+            this.lstboxSearchItems.Size = new System.Drawing.Size(423, 251);
             this.lstboxSearchItems.TabIndex = 2;
             // 
             // txtboxResultNote
@@ -106,6 +106,7 @@
             this.btnSubmit.TabIndex = 4;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // lblCurrentResult
             // 
@@ -114,7 +115,7 @@
             this.lblCurrentResult.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(241)))), ((int)(((byte)(227)))));
             this.lblCurrentResult.Location = new System.Drawing.Point(9, 47);
             this.lblCurrentResult.Name = "lblCurrentResult";
-            this.lblCurrentResult.Size = new System.Drawing.Size(171, 28);
+            this.lblCurrentResult.Size = new System.Drawing.Size(135, 23);
             this.lblCurrentResult.TabIndex = 1;
             this.lblCurrentResult.Text = "Current Result";
             // 
@@ -162,7 +163,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(121)))));
             this.label1.Location = new System.Drawing.Point(146, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 28);
+            this.label1.Size = new System.Drawing.Size(93, 23);
             this.label1.TabIndex = 1;
             this.label1.Text = "Notepad";
             // 
@@ -173,7 +174,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(210)))), ((int)(((byte)(211)))));
             this.label2.Location = new System.Drawing.Point(5, 23);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(331, 37);
+            this.label2.Size = new System.Drawing.Size(264, 28);
             this.label2.TabIndex = 1;
             this.label2.Text = "JCon Contact Tracing";
             // 
@@ -203,7 +204,7 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(210)))), ((int)(((byte)(211)))));
             this.label3.Location = new System.Drawing.Point(342, 41);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 19);
+            this.label3.Size = new System.Drawing.Size(79, 17);
             this.label3.TabIndex = 1;
             this.label3.Text = "version 1.0";
             // 
@@ -212,15 +213,15 @@
             this.listError.ForeColor = System.Drawing.Color.Green;
             this.listError.FormattingEnabled = true;
             this.listError.HorizontalScrollbar = true;
-            this.listError.ItemHeight = 20;
+            this.listError.ItemHeight = 17;
             this.listError.Location = new System.Drawing.Point(18, 136);
             this.listError.Name = "listError";
-            this.listError.Size = new System.Drawing.Size(422, 64);
+            this.listError.Size = new System.Drawing.Size(422, 55);
             this.listError.TabIndex = 7;
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
             this.ClientSize = new System.Drawing.Size(902, 562);
