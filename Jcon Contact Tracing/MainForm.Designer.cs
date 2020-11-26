@@ -32,12 +32,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.txtboxInput = new System.Windows.Forms.TextBox();
             this.lblResult = new System.Windows.Forms.Label();
-            this.lstboxResults = new System.Windows.Forms.ListBox();
+            this.lstboxSearchItems = new System.Windows.Forms.ListBox();
             this.txtboxResultNote = new System.Windows.Forms.TextBox();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.lblCurrentResult = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.btnTakeNote = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -57,6 +57,7 @@
             this.txtboxInput.Name = "txtboxInput";
             this.txtboxInput.Size = new System.Drawing.Size(422, 49);
             this.txtboxInput.TabIndex = 0;
+            this.txtboxInput.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtboxInput_KeyDown);
             // 
             // lblResult
             // 
@@ -69,17 +70,17 @@
             this.lblResult.TabIndex = 1;
             this.lblResult.Text = "Result";
             // 
-            // lstboxResults
+            // lstboxSearchItems
             // 
-            this.lstboxResults.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(96)))), ((int)(((byte)(111)))));
-            this.lstboxResults.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lstboxResults.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(236)))), ((int)(((byte)(238)))));
-            this.lstboxResults.FormattingEnabled = true;
-            this.lstboxResults.ItemHeight = 23;
-            this.lstboxResults.Location = new System.Drawing.Point(17, 212);
-            this.lstboxResults.Name = "lstboxResults";
-            this.lstboxResults.Size = new System.Drawing.Size(423, 257);
-            this.lstboxResults.TabIndex = 2;
+            this.lstboxSearchItems.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(96)))), ((int)(((byte)(111)))));
+            this.lstboxSearchItems.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstboxSearchItems.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(236)))), ((int)(((byte)(238)))));
+            this.lstboxSearchItems.FormattingEnabled = true;
+            this.lstboxSearchItems.ItemHeight = 23;
+            this.lstboxSearchItems.Location = new System.Drawing.Point(17, 212);
+            this.lstboxSearchItems.Name = "lstboxSearchItems";
+            this.lstboxSearchItems.Size = new System.Drawing.Size(423, 257);
+            this.lstboxSearchItems.TabIndex = 2;
             // 
             // txtboxResultNote
             // 
@@ -99,13 +100,12 @@
             this.btnSubmit.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.Color.Black;
             this.btnSubmit.ImageKey = "(none)";
-            this.btnSubmit.Location = new System.Drawing.Point(18, 489);
+            this.btnSubmit.Location = new System.Drawing.Point(48, 489);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(112, 55);
             this.btnSubmit.TabIndex = 4;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = false;
-            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // lblCurrentResult
             // 
@@ -124,25 +124,25 @@
             this.btnAdd.Enabled = false;
             this.btnAdd.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.Black;
-            this.btnAdd.Location = new System.Drawing.Point(149, 489);
+            this.btnAdd.Location = new System.Drawing.Point(179, 489);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(103, 55);
             this.btnAdd.TabIndex = 4;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
             // 
-            // btnTakeNote
+            // btnSave
             // 
-            this.btnTakeNote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(129)))), ((int)(((byte)(122)))));
-            this.btnTakeNote.Enabled = false;
-            this.btnTakeNote.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTakeNote.ForeColor = System.Drawing.Color.Black;
-            this.btnTakeNote.Location = new System.Drawing.Point(273, 489);
-            this.btnTakeNote.Name = "btnTakeNote";
-            this.btnTakeNote.Size = new System.Drawing.Size(111, 55);
-            this.btnTakeNote.TabIndex = 4;
-            this.btnTakeNote.Text = "Take Note";
-            this.btnTakeNote.UseVisualStyleBackColor = false;
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(129)))), ((int)(((byte)(122)))));
+            this.btnSave.Enabled = false;
+            this.btnSave.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.Color.Black;
+            this.btnSave.Location = new System.Drawing.Point(303, 489);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(111, 55);
+            this.btnSave.TabIndex = 4;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = false;
             // 
             // panel1
             // 
@@ -201,7 +201,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(210)))), ((int)(((byte)(211)))));
-            this.label3.Location = new System.Drawing.Point(801, 9);
+            this.label3.Location = new System.Drawing.Point(342, 41);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(98, 19);
             this.label3.TabIndex = 1;
@@ -209,7 +209,7 @@
             // 
             // listError
             // 
-            this.listError.ForeColor = System.Drawing.Color.Red;
+            this.listError.ForeColor = System.Drawing.Color.Green;
             this.listError.FormattingEnabled = true;
             this.listError.HorizontalScrollbar = true;
             this.listError.ItemHeight = 20;
@@ -223,14 +223,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
-            this.ClientSize = new System.Drawing.Size(911, 565);
+            this.ClientSize = new System.Drawing.Size(902, 562);
             this.Controls.Add(this.picboxDownload);
             this.Controls.Add(this.listError);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnTakeNote);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnSubmit);
-            this.Controls.Add(this.lstboxResults);
+            this.Controls.Add(this.lstboxSearchItems);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblResult);
@@ -254,12 +254,12 @@
 
         private System.Windows.Forms.TextBox txtboxInput;
         private System.Windows.Forms.Label lblResult;
-        private System.Windows.Forms.ListBox lstboxResults;
+        private System.Windows.Forms.ListBox lstboxSearchItems;
         private System.Windows.Forms.TextBox txtboxResultNote;
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.Label lblCurrentResult;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnTakeNote;
+        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
