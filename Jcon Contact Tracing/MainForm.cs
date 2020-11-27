@@ -22,7 +22,7 @@ namespace Jcon_Contact_Tracing
             lstboxSearchItems.DataSource = DataCollection.SearchItem;
         }
 
-        public void ProcessItem()
+        public void ProcessSearch()
         {
             UnknownModel userObject = new UnknownModel();
             userObject.obj = txtboxInput.Text.ToUpper();
@@ -96,7 +96,7 @@ namespace Jcon_Contact_Tracing
         {
             if(e.KeyCode == Keys.Enter)
             {
-                ProcessItem();
+                ProcessSearch();
             }
             
         }

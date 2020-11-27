@@ -31,7 +31,8 @@ namespace Jcon_Contact_Tracing.Validator
                    // The Criteria to be valid Jcon Path Name
                    && (obj.Length == 9 || obj.Length == 8)
                    && obj.Substring(4, 1) == " "
-                   && obj.Substring(6, 1) == " ";
+                   && obj.Substring(6, 1) == " "
+                   && byte.TryParse(obj.Substring(7,obj.Length - 7), out byte result);
         }
     }
 }
