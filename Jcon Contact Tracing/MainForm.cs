@@ -19,10 +19,6 @@ namespace Jcon_Contact_Tracing
         {
             InitializeComponent();
             listError.DataSource = DataCollection.Logs;
-            listError.SelectedIndex = listError.Items.Count - 1;
-            listError.SelectedIndex = -1;
-
-            lstboxSearchItems.DataSource = DataCollection.SearchItem;
         }
 
 
@@ -55,10 +51,8 @@ namespace Jcon_Contact_Tracing
             
             if(e.Control && e.KeyCode == Keys.A)
             {
-                
                 ProcessItem.AddToDataCollection(txtboxInput.Text.ToUpper(), lblResult.Text);
-
-                
+                lstboxSearchItems.Items.Add(DataCollection.SearchItem[DataCollection.SearchItem.Count -1]);
             }
 
         }
@@ -83,7 +77,7 @@ namespace Jcon_Contact_Tracing
                 if (Content != null)
                 {
                     txtboxNotes.Text = Content;
-
+                    lblCurrentResult.Text = DataCollection.SearchItem[Index];
                 }
                 else
                 {

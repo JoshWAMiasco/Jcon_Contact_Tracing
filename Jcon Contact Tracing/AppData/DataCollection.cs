@@ -10,7 +10,7 @@ namespace Jcon_Contact_Tracing.AppData
     public class DataCollection
     {
         public static BindingList<string> Logs = new BindingList<string>();
-        public static BindingList<string> SearchItem = new BindingList<string>();
+        public static List<string> SearchItem = new List<string>();
         public static List<string> Notes = new List<string>();
     }
 }
