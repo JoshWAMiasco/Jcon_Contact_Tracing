@@ -99,5 +99,12 @@ namespace Jcon_Contact_Tracing
         {
             NotePad.Save(txtboxNotes.Text);
         }
+
+        private void picboxDownload_Click(object sender, EventArgs e)
+        {
+            string username = Environment.UserName;
+            string PathLocation = @"C:\Users\Username\Desktop\DataLogs.txt".Replace("Username", username);
+            Datalogs.GenerateTextFile(PathLocation);
+        }
     }
 }

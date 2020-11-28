@@ -196,6 +196,7 @@
             this.picboxDownload.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picboxDownload.TabIndex = 6;
             this.picboxDownload.TabStop = false;
+            this.picboxDownload.Click += new System.EventHandler(this.picboxDownload_Click);
             this.picboxDownload.MouseLeave += new System.EventHandler(this.picboxDownload_MouseLeave);
             this.picboxDownload.MouseHover += new System.EventHandler(this.picboxDownload_MouseHover);
             // 
