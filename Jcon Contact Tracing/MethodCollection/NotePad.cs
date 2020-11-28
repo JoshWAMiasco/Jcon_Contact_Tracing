@@ -13,11 +13,12 @@ namespace Jcon_Contact_Tracing.MethodCollection
         private static int CurrentIndex;
         public static void DisplayComment(int index, out string Content)
         {
+            CurrentIndex = index;
 
             try
             {
                 Content = DataCollection.Notes[index];
-                CurrentIndex = index;
+               
             }
             catch
             {

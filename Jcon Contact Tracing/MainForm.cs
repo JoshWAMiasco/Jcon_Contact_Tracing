@@ -100,5 +100,10 @@ namespace Jcon_Contact_Tracing
                 NotePad.Save(txtboxNotes.Text);
             }
         }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            NotePad.Save(txtboxNotes.Text);
+        }
     }
 }
