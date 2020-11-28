@@ -101,7 +101,10 @@ namespace Jcon_Contact_Tracing.MethodCollection
 
 
 
-
+        public static void AddToDataCollection(string ItemSearch, string Result)
+        {
+            DataCollection.SearchItem.Add($"{ItemSearch}  :  {Result}");
+        }
 
 
 

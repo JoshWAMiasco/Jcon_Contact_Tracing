@@ -33,7 +33,7 @@
             this.txtboxInput = new System.Windows.Forms.TextBox();
             this.lblResult = new System.Windows.Forms.Label();
             this.lstboxSearchItems = new System.Windows.Forms.ListBox();
-            this.txtboxResultNote = new System.Windows.Forms.TextBox();
+            this.txtboxNotes = new System.Windows.Forms.TextBox();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.lblCurrentResult = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -81,18 +81,20 @@
             this.lstboxSearchItems.Name = "lstboxSearchItems";
             this.lstboxSearchItems.Size = new System.Drawing.Size(423, 251);
             this.lstboxSearchItems.TabIndex = 2;
+            this.lstboxSearchItems.DoubleClick += new System.EventHandler(this.lstboxSearchItems_DoubleClick);
             // 
-            // txtboxResultNote
+            // txtboxNotes
             // 
-            this.txtboxResultNote.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(215)))), ((int)(((byte)(148)))));
-            this.txtboxResultNote.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtboxResultNote.Enabled = false;
-            this.txtboxResultNote.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtboxResultNote.Location = new System.Drawing.Point(7, 87);
-            this.txtboxResultNote.Multiline = true;
-            this.txtboxResultNote.Name = "txtboxResultNote";
-            this.txtboxResultNote.Size = new System.Drawing.Size(408, 242);
-            this.txtboxResultNote.TabIndex = 3;
+            this.txtboxNotes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(215)))), ((int)(((byte)(148)))));
+            this.txtboxNotes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtboxNotes.Enabled = false;
+            this.txtboxNotes.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtboxNotes.Location = new System.Drawing.Point(7, 87);
+            this.txtboxNotes.Multiline = true;
+            this.txtboxNotes.Name = "txtboxNotes";
+            this.txtboxNotes.Size = new System.Drawing.Size(408, 242);
+            this.txtboxNotes.TabIndex = 3;
+            this.txtboxNotes.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtboxNotes_KeyDown);
             // 
             // btnSubmit
             // 
@@ -148,7 +150,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(96)))), ((int)(((byte)(111)))));
-            this.panel1.Controls.Add(this.txtboxResultNote);
+            this.panel1.Controls.Add(this.txtboxNotes);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.lblCurrentResult);
             this.panel1.Location = new System.Drawing.Point(457, 135);
@@ -256,7 +258,7 @@
         private System.Windows.Forms.TextBox txtboxInput;
         private System.Windows.Forms.Label lblResult;
         private System.Windows.Forms.ListBox lstboxSearchItems;
-        private System.Windows.Forms.TextBox txtboxResultNote;
+        private System.Windows.Forms.TextBox txtboxNotes;
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.Label lblCurrentResult;
         private System.Windows.Forms.Button btnAdd;

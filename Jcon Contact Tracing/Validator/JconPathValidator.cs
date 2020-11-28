@@ -16,14 +16,12 @@ namespace Jcon_Contact_Tracing.Validator
         public JconPathValidator()
         {
             RuleFor(item => item.TableName)
-            
                 .Must(ValidJconName).WithMessage("Invalid Jcon Name");
 
             RuleFor(item => item.Column)
                 .Must(ValidJconColumn).WithMessage("Invalid Jcon Column name");
 
             RuleFor(item => item.Row)
-                 
                 .Must(ValidJconRow).WithMessage("Jcon Row Exceed Limit");
 
         }

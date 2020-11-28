@@ -19,6 +19,9 @@ namespace Jcon_Contact_Tracing
         {
             InitializeComponent();
             listError.DataSource = DataCollection.Logs;
+            listError.SelectedIndex = listError.Items.Count - 1;
+            listError.SelectedIndex = -1;
+
             lstboxSearchItems.DataSource = DataCollection.SearchItem;
         }
 
@@ -42,14 +45,22 @@ namespace Jcon_Contact_Tracing
         }
 
         private void txtboxInput_KeyDown(object sender, KeyEventArgs e)
-        {
+       {
             if(e.KeyCode == Keys.Enter)
             {
-                ProcessItem.Search(txtboxInput.Text, out string Result);
+                ProcessItem.Search(txtboxInput.Text.ToUpper(), out string Result);
                 if (Result != null)
                     lblResult.Text = Result;
             }
             
+            if(e.Control && e.KeyCode == Keys.A)
+            {
+                
+                ProcessItem.AddToDataCollection(txtboxInput.Text.ToUpper(), lblResult.Text);
+
+                
+            }
+
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)
@@ -57,14 +68,37 @@ namespace Jcon_Contact_Tracing
 
         }
 
+        private void lstboxSearchItems_DoubleClick(object sender, EventArgs e)
+        {
+           
+            if (lstboxSearchItems.SelectedItem == null)
+            {
+                MessageBox.Show("Please Select Item");
+            }
+            else
+            {
+                txtboxNotes.Enabled = true;
+                int Index = lstboxSearchItems.SelectedIndex;
+                NotePad.DisplayComment(Index, out string Content);
+                if (Content != null)
+                {
+                    txtboxNotes.Text = Content;
 
+                }
+                else
+                {
+                    txtboxNotes.Text = "";
+                }
+                
+            }
+        }
 
-
-
-
-
-
-
-
+        private void txtboxNotes_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.Control && e.KeyCode == Keys.S)
+            {
+                NotePad.Save(txtboxNotes.Text);
+            }
+        }
     }
 }

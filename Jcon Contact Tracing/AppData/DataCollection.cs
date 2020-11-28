@@ -11,6 +11,6 @@ namespace Jcon_Contact_Tracing.AppData
     {
         public static BindingList<string> Logs = new BindingList<string>();
         public static BindingList<string> SearchItem = new BindingList<string>();
-        public static BindingList<string> Notes = new BindingList<string>();
+        public static List<string> Notes = new List<string>();
     }
 }
