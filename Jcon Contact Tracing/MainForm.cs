@@ -7,6 +7,7 @@ using FluentValidation.Results;
 using Jcon_Contact_Tracing.AppData;
 using FluentValidation;
 using Jcon_Contact_Tracing.MethodCollection;
+using System.Drawing;
 
 namespace Jcon_Contact_Tracing
 {
@@ -71,16 +72,19 @@ namespace Jcon_Contact_Tracing
             }
             else
             {
+                
                 txtboxNotes.Enabled = true;
                 int Index = lstboxSearchItems.SelectedIndex;
+                lblCurrentResult.Text = DataCollection.SearchItem[Index];
                 NotePad.DisplayComment(Index, out string Content);
                 if (Content != null)
                 {
+                    txtboxNotes.ForeColor = Color.Green;
                     txtboxNotes.Text = Content;
-                    lblCurrentResult.Text = DataCollection.SearchItem[Index];
                 }
                 else
                 {
+                    txtboxNotes.ForeColor = Color.Red;
                     txtboxNotes.Text = "";
                 }
                 
@@ -92,6 +96,8 @@ namespace Jcon_Contact_Tracing
             if(e.Control && e.KeyCode == Keys.S)
             {
                 NotePad.Save(txtboxNotes.Text);
+                txtboxNotes.ForeColor = Color.Green;
+                picboxDownload.Enabled = true;
             }
         }
 
@@ -102,9 +108,9 @@ namespace Jcon_Contact_Tracing
 
         private void picboxDownload_Click(object sender, EventArgs e)
         {
-            string username = Environment.UserName;
-            string PathLocation = @"C:\Users\Username\Desktop\DataLogs.txt".Replace("Username", username);
-            Datalogs.GenerateTextFile(PathLocation);
+            Text_File_Generation txtfilegen = new Text_File_Generation();
+            txtfilegen.Show();
+            picboxDownload.Enabled = false;
         }
     }
 }
