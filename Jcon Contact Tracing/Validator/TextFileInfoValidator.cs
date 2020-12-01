@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Jcon_Contact_Tracing.UserData;
+using System;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using FluentValidation;
-using Jcon_Contact_Tracing.UserData;
 
 namespace Jcon_Contact_Tracing.Validator
 {
@@ -31,7 +27,6 @@ namespace Jcon_Contact_Tracing.Validator
                 .NotEmpty().WithMessage("Please fill up")
                 .Length(4, 20).WithMessage("invalid text length");
         }
-
 
         protected bool NotDuplicate(string file)
         {

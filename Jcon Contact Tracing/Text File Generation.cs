@@ -1,14 +1,7 @@
 ﻿using Jcon_Contact_Tracing.AppData;
 using Jcon_Contact_Tracing.MethodCollection;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Jcon_Contact_Tracing
@@ -29,7 +22,6 @@ namespace Jcon_Contact_Tracing
                 MessageBoxButtons buttons = MessageBoxButtons.OK;
                 DialogResult result = MessageBox.Show(DataCollection.ErrorMessage, "Warning Message", buttons);
                 if (result == DialogResult.OK) DataCollection.ErrorMessage = null;
-                
             }
             else
             {

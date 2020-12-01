@@ -41,18 +41,25 @@ namespace Jcon_Contact_Tracing
             picboxDownload.Image = imageList1.Images[1];
         }
 
+
+
+        // inputCaptured prevent to Add different or change user input on the real search data.
+        string inputCaptured = null;
         private void txtboxInput_KeyDown(object sender, KeyEventArgs e)
        {
+            
+
             if(e.KeyCode == Keys.Enter)
             {
                 ProcessItem.Search(txtboxInput.Text.ToUpper(), out string Result);
                 if (Result != null)
                     lblResult.Text = Result;
+                    inputCaptured = txtboxInput.Text;
             }
             
             if(e.Control && e.KeyCode == Keys.A)
             {
-                ProcessItem.AddToDataCollection(txtboxInput.Text.ToUpper(), lblResult.Text);
+                ProcessItem.AddToDataCollection(inputCaptured.ToUpper(), lblResult.Text);
                 lstboxSearchItems.Items.Add(DataCollection.SearchItem[DataCollection.SearchItem.Count -1]);
             }
 
@@ -71,11 +78,11 @@ namespace Jcon_Contact_Tracing
                 MessageBox.Show("Please Select Item");
             }
             else
-            {
-                
+            {   
                 txtboxNotes.Enabled = true;
                 int Index = lstboxSearchItems.SelectedIndex;
                 lblCurrentResult.Text = DataCollection.SearchItem[Index];
+                MessageBox.Show(Index.ToString() + " Double click");
                 NotePad.DisplayComment(Index, out string Content);
                 if (Content != null)
                 {
@@ -87,7 +94,6 @@ namespace Jcon_Contact_Tracing
                     txtboxNotes.ForeColor = Color.Red;
                     txtboxNotes.Text = "";
                 }
-                
             }
         }
 

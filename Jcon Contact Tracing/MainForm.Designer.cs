@@ -36,10 +36,10 @@
             this.txtboxNotes = new System.Windows.Forms.TextBox();
             this.lblCurrentResult = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.picboxDownload = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.picboxDownload = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.listError = new System.Windows.Forms.ListBox();
             this.panel1.SuspendLayout();
@@ -118,6 +118,20 @@
             this.panel1.Size = new System.Drawing.Size(423, 334);
             this.panel1.TabIndex = 5;
             // 
+            // picboxDownload
+            // 
+            this.picboxDownload.Enabled = false;
+            this.picboxDownload.Image = ((System.Drawing.Image)(resources.GetObject("picboxDownload.Image")));
+            this.picboxDownload.Location = new System.Drawing.Point(349, 20);
+            this.picboxDownload.Name = "picboxDownload";
+            this.picboxDownload.Size = new System.Drawing.Size(55, 55);
+            this.picboxDownload.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picboxDownload.TabIndex = 6;
+            this.picboxDownload.TabStop = false;
+            this.picboxDownload.Click += new System.EventHandler(this.picboxDownload_Click);
+            this.picboxDownload.MouseLeave += new System.EventHandler(this.picboxDownload_MouseLeave);
+            this.picboxDownload.MouseHover += new System.EventHandler(this.picboxDownload_MouseHover);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -134,7 +148,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(210)))), ((int)(((byte)(211)))));
-            this.label2.Location = new System.Drawing.Point(288, 19);
+            this.label2.Location = new System.Drawing.Point(266, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(331, 37);
             this.label2.TabIndex = 1;
@@ -146,20 +160,6 @@
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             this.imageList1.Images.SetKeyName(0, "download_52px.png");
             this.imageList1.Images.SetKeyName(1, "downpx.png");
-            // 
-            // picboxDownload
-            // 
-            this.picboxDownload.Enabled = false;
-            this.picboxDownload.Image = ((System.Drawing.Image)(resources.GetObject("picboxDownload.Image")));
-            this.picboxDownload.Location = new System.Drawing.Point(349, 20);
-            this.picboxDownload.Name = "picboxDownload";
-            this.picboxDownload.Size = new System.Drawing.Size(55, 55);
-            this.picboxDownload.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picboxDownload.TabIndex = 6;
-            this.picboxDownload.TabStop = false;
-            this.picboxDownload.Click += new System.EventHandler(this.picboxDownload_Click);
-            this.picboxDownload.MouseLeave += new System.EventHandler(this.picboxDownload_MouseLeave);
-            this.picboxDownload.MouseHover += new System.EventHandler(this.picboxDownload_MouseHover);
             // 
             // label3
             // 

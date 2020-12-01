@@ -1,18 +1,17 @@
-﻿using FluentValidation;
-using Jcon_Contact_Tracing.UserData;
+﻿using Jcon_Contact_Tracing.UserData;
 using LTXJconLibrary;
 using System;
 using System.Collections.Generic;
+using FluentValidation;
 
 namespace Jcon_Contact_Tracing.Validator
 {
     public class JconPathValidator : AbstractValidator<JconPathModel>
     {
-        bool Result;
-        string Cathegory;
-        List<string> J1 = new List<string> { "J100", "J101", "J102", "J103"};
-        
-        
+        private bool Result;
+        private string Cathegory;
+        private List<string> J1 = new List<string> { "J100", "J101", "J102", "J103" };
+
         public JconPathValidator()
         {
             RuleFor(item => item.TableName)
@@ -23,13 +22,11 @@ namespace Jcon_Contact_Tracing.Validator
 
             RuleFor(item => item.Row)
                 .Must(ValidJconRow).WithMessage("Jcon Row Exceed Limit");
-
         }
-
 
         protected bool ValidJconName(string Jname)
         {
-            foreach(string content in Enum.GetNames(typeof(JconTable.JconTableNames)))
+            foreach (string content in Enum.GetNames(typeof(JconTable.JconTableNames)))
             {
                 if (content == Jname)
                 {
@@ -38,14 +35,13 @@ namespace Jcon_Contact_Tracing.Validator
                     break;
                 }
                 else Result = false;
-                
             }
             return Result ? Result : Result;
         }
 
         protected bool ValidJconColumn(char jcolumn)
         {
-            foreach(string content in Enum.GetNames(typeof(JconTable.Column)))
+            foreach (string content in Enum.GetNames(typeof(JconTable.Column)))
             {
                 if (content == jcolumn.ToString())
                 {
@@ -69,10 +65,5 @@ namespace Jcon_Contact_Tracing.Validator
             }
             else return false;
         }
-
-
-
     }
 }
-
-    

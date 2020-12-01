@@ -1,13 +1,10 @@
-﻿using FluentValidation.Results;
-using Jcon_Contact_Tracing.AppData;
+﻿using Jcon_Contact_Tracing.AppData;
 using Jcon_Contact_Tracing.UserData;
 using Jcon_Contact_Tracing.Validator;
 using LTXJconLibrary;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using FluentValidation;
+using FluentValidation.Results;
 
 namespace Jcon_Contact_Tracing.MethodCollection
 {
@@ -17,12 +14,11 @@ namespace Jcon_Contact_Tracing.MethodCollection
         {
             GetCathegory(Item.ToUpper(), out string Cathegory, out string ItemForSearch);
 
-         
-            if(Cathegory == "System Board")
+            if (Cathegory == "System Board")
             {
                 Result = JconPath.Search(ItemForSearch);
             }
-            else if(Cathegory == "Jcon Path")
+            else if (Cathegory == "Jcon Path")
             {
                 Result = DisplaySystemBoardSearch(ItemForSearch);
             }
@@ -31,14 +27,10 @@ namespace Jcon_Contact_Tracing.MethodCollection
                 Result = null;
             }
 
-
-
-
             // Local Methods
 
-             void GetCathegory(string userObject, out string cathegory, out string itemForSearch)
+            void GetCathegory(string userObject, out string cathegory, out string itemForSearch)
             {
-
                 UnknownModel unknown = new UnknownModel();
                 unknown.obj = userObject;
                 UnknownValidator userValidator = new UnknownValidator();
@@ -64,11 +56,7 @@ namespace Jcon_Contact_Tracing.MethodCollection
 
                     itemForSearch = unknown.obj;
                 }
-
             }
-
-
-
 
             string DisplaySystemBoardSearch(string item)
             {
@@ -92,21 +80,12 @@ namespace Jcon_Contact_Tracing.MethodCollection
                 {
                     return SystemBoard.Search(jconpath.TableName, jconpath.Column, jconpath.Row);
                 }
-
             }
-
-
         }
-
-
-
 
         public static void AddToDataCollection(string ItemSearch, string Result)
         {
             DataCollection.SearchItem.Add($"{ItemSearch}  :  {Result}");
         }
-
-
-
     }
 }

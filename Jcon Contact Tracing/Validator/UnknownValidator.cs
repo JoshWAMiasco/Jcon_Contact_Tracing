@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Jcon_Contact_Tracing.UserData;
 using FluentValidation;
-using Jcon_Contact_Tracing.UserData;
 
 namespace Jcon_Contact_Tracing.Validator
 {
@@ -17,7 +12,6 @@ namespace Jcon_Contact_Tracing.Validator
                 .NotEmpty().WithMessage("must fill up before submit")
                 .Length(4, 20).WithMessage("Invalid input length")
                 .Must(ValidInfo).WithMessage("Must contain correct identification");
-                
         }
 
         protected bool ValidInfo(string obj)
@@ -32,7 +26,7 @@ namespace Jcon_Contact_Tracing.Validator
                    && (obj.Length == 9 || obj.Length == 8)
                    && obj.Substring(4, 1) == " "
                    && obj.Substring(6, 1) == " "
-                   && byte.TryParse(obj.Substring(7,obj.Length - 7), out byte result);
+                   && byte.TryParse(obj.Substring(7, obj.Length - 7), out byte result);
         }
     }
 }
