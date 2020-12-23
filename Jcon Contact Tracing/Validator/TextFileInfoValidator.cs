@@ -10,7 +10,7 @@ namespace Jcon_Contact_Tracing.Validator
         public TextFileInfoValidator()
         {
             RuleFor(t => t.title)
-                .Cascade(CascadeMode.StopOnFirstFailure)
+                .Cascade(cascadeMode: CascadeMode.StopOnFirstFailure)
                 .NotEmpty().WithMessage("Please fill up")
                 .Length(4, 20).WithMessage("invalid text length")
                 .Must(NotDuplicate).WithMessage("Title Already use by your Computer");
