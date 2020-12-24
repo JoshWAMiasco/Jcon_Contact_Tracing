@@ -70,6 +70,12 @@
     <Compile Include="Text File Generation.Designer.cs">
       <DependentUpon>Text File Generation.cs</DependentUpon>
     </Compile>
+    <Compile Include="Updates.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Updates.Designer.cs">
+      <DependentUpon>Updates.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserData\JconPathModel.cs" />
     <Compile Include="UserData\TextFileInfoModel.cs" />
     <Compile Include="UserData\UnknownModel.cs" />
@@ -96,6 +102,9 @@
     </Compile>
     <EmbeddedResource Include="Text File Generation.resx">
       <DependentUpon>Text File Generation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Updates.resx">
+      <DependentUpon>Updates.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WorkBenchForm.resx">
       <DependentUpon>WorkBenchForm.cs</DependentUpon>

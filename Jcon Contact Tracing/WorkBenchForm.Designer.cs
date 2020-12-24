@@ -48,9 +48,11 @@ namespace Jcon_Contact_Tracing
             this.listError.ForeColor = System.Drawing.Color.Green;
             this.listError.FormattingEnabled = true;
             this.listError.HorizontalScrollbar = true;
-            this.listError.Location = new System.Drawing.Point(12, 414);
+            this.listError.ItemHeight = 16;
+            this.listError.Location = new System.Drawing.Point(17, 368);
+            this.listError.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listError.Name = "listError";
-            this.listError.Size = new System.Drawing.Size(439, 69);
+            this.listError.Size = new System.Drawing.Size(488, 84);
             this.listError.TabIndex = 11;
             // 
             // panel1
@@ -60,18 +62,20 @@ namespace Jcon_Contact_Tracing
             this.panel1.Controls.Add(this.txtboxNotes);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.lblCurrentResult);
-            this.panel1.Location = new System.Drawing.Point(457, 13);
+            this.panel1.Location = new System.Drawing.Point(513, 13);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(426, 470);
+            this.panel1.Size = new System.Drawing.Size(467, 434);
             this.panel1.TabIndex = 10;
             // 
             // picboxDownload
             // 
             this.picboxDownload.Enabled = false;
             this.picboxDownload.Image = ((System.Drawing.Image)(resources.GetObject("picboxDownload.Image")));
-            this.picboxDownload.Location = new System.Drawing.Point(349, 20);
+            this.picboxDownload.Location = new System.Drawing.Point(336, 24);
+            this.picboxDownload.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.picboxDownload.Name = "picboxDownload";
-            this.picboxDownload.Size = new System.Drawing.Size(55, 55);
+            this.picboxDownload.Size = new System.Drawing.Size(73, 68);
             this.picboxDownload.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picboxDownload.TabIndex = 6;
             this.picboxDownload.TabStop = false;
@@ -84,10 +88,11 @@ namespace Jcon_Contact_Tracing
             this.txtboxNotes.Enabled = false;
             this.txtboxNotes.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtboxNotes.ForeColor = System.Drawing.Color.Red;
-            this.txtboxNotes.Location = new System.Drawing.Point(7, 87);
+            this.txtboxNotes.Location = new System.Drawing.Point(9, 107);
+            this.txtboxNotes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtboxNotes.Multiline = true;
             this.txtboxNotes.Name = "txtboxNotes";
-            this.txtboxNotes.Size = new System.Drawing.Size(408, 368);
+            this.txtboxNotes.Size = new System.Drawing.Size(442, 310);
             this.txtboxNotes.TabIndex = 3;
             this.txtboxNotes.Text = "Some Comment Here";
             this.txtboxNotes.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtboxNotes_KeyDown);
@@ -97,9 +102,10 @@ namespace Jcon_Contact_Tracing
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(218)))), ((int)(((byte)(121)))));
-            this.label1.Location = new System.Drawing.Point(146, 6);
+            this.label1.Location = new System.Drawing.Point(22, 13);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 23);
+            this.label1.Size = new System.Drawing.Size(115, 28);
             this.label1.TabIndex = 1;
             this.label1.Text = "Notepad";
             // 
@@ -108,9 +114,10 @@ namespace Jcon_Contact_Tracing
             this.lblCurrentResult.AutoSize = true;
             this.lblCurrentResult.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCurrentResult.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(241)))), ((int)(((byte)(227)))));
-            this.lblCurrentResult.Location = new System.Drawing.Point(3, 52);
+            this.lblCurrentResult.Location = new System.Drawing.Point(4, 64);
+            this.lblCurrentResult.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCurrentResult.Name = "lblCurrentResult";
-            this.lblCurrentResult.Size = new System.Drawing.Size(135, 23);
+            this.lblCurrentResult.Size = new System.Drawing.Size(171, 28);
             this.lblCurrentResult.TabIndex = 1;
             this.lblCurrentResult.Text = "Current Result";
             // 
@@ -120,20 +127,21 @@ namespace Jcon_Contact_Tracing
             this.lstboxSearchItems.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstboxSearchItems.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(199)))), ((int)(((byte)(236)))), ((int)(((byte)(238)))));
             this.lstboxSearchItems.FormattingEnabled = true;
-            this.lstboxSearchItems.ItemHeight = 19;
-            this.lstboxSearchItems.Location = new System.Drawing.Point(12, 121);
+            this.lstboxSearchItems.ItemHeight = 23;
+            this.lstboxSearchItems.Location = new System.Drawing.Point(16, 149);
+            this.lstboxSearchItems.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lstboxSearchItems.Name = "lstboxSearchItems";
-            this.lstboxSearchItems.Size = new System.Drawing.Size(439, 289);
+            this.lstboxSearchItems.Size = new System.Drawing.Size(489, 211);
             this.lstboxSearchItems.TabIndex = 9;
             this.lstboxSearchItems.DoubleClick += new System.EventHandler(this.lstboxSearchItems_DoubleClick);
             // 
             // txtboxInput
             // 
             this.txtboxInput.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtboxInput.Location = new System.Drawing.Point(13, 13);
-            this.txtboxInput.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtboxInput.Location = new System.Drawing.Point(17, 16);
+            this.txtboxInput.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtboxInput.Name = "txtboxInput";
-            this.txtboxInput.Size = new System.Drawing.Size(438, 41);
+            this.txtboxInput.Size = new System.Drawing.Size(488, 49);
             this.txtboxInput.TabIndex = 8;
             this.txtboxInput.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtboxInput_KeyDown);
             // 
@@ -142,23 +150,26 @@ namespace Jcon_Contact_Tracing
             this.lblResult.AutoSize = true;
             this.lblResult.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblResult.ForeColor = System.Drawing.Color.Black;
-            this.lblResult.Location = new System.Drawing.Point(12, 65);
+            this.lblResult.Location = new System.Drawing.Point(16, 80);
+            this.lblResult.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblResult.Name = "lblResult";
-            this.lblResult.Size = new System.Drawing.Size(79, 28);
+            this.lblResult.Size = new System.Drawing.Size(100, 37);
             this.lblResult.TabIndex = 12;
             this.lblResult.Text = "Result";
             // 
             // WorkBenchForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(895, 495);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ClientSize = new System.Drawing.Size(991, 465);
             this.Controls.Add(this.lblResult);
-            this.Controls.Add(this.listError);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lstboxSearchItems);
             this.Controls.Add(this.txtboxInput);
+            this.Controls.Add(this.listError);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "WorkBenchForm";
             this.Text = "WorkBenchForm";
             this.panel1.ResumeLayout(false);

@@ -21,13 +21,23 @@ namespace Jcon_Contact_Tracing
             InitializeComponent();
         }
         WorkBenchForm benchform = new WorkBenchForm();
-
+        Updates updatesForm = new Updates();
         private void btnWorkbench_Click(object sender, EventArgs e)
         {
+            PanelForms.Controls.Remove(updatesForm);
             benchform.TopLevel = false;
             PanelForms.Controls.Add(benchform);
-            benchform.Size = PanelForms.Size;
+            
             benchform.Show();
+        }
+
+        private void btnUpdates_Click(object sender, EventArgs e)
+        {
+            PanelForms.Controls.Remove(benchform);
+            updatesForm.TopLevel = false;
+            PanelForms.Controls.Add(updatesForm);
+            
+            updatesForm.Show();
         }
     }
 }

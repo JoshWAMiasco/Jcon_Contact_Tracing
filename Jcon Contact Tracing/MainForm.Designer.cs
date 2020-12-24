@@ -36,8 +36,10 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnWorkbench = new Bunifu.Framework.UI.BunifuImageButton();
             this.PanelForms = new System.Windows.Forms.Panel();
+            this.btnUpdates = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnWorkbench)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnUpdates)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -47,7 +49,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(210)))), ((int)(((byte)(211)))));
             this.label2.Location = new System.Drawing.Point(22, 17);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(264, 28);
+            this.label2.Size = new System.Drawing.Size(331, 37);
             this.label2.TabIndex = 1;
             this.label2.Text = "JCon Contact Tracing";
             // 
@@ -65,19 +67,20 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(210)))), ((int)(((byte)(211)))));
             this.label3.Location = new System.Drawing.Point(321, 27);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(137, 17);
+            this.label3.Size = new System.Drawing.Size(168, 20);
             this.label3.TabIndex = 1;
             this.label3.Text = "JCon Contact Tracing";
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnUpdates);
             this.panel2.Controls.Add(this.btnWorkbench);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(919, 57);
+            this.panel2.Size = new System.Drawing.Size(899, 57);
             this.panel2.TabIndex = 8;
             // 
             // btnWorkbench
@@ -98,16 +101,30 @@
             // 
             this.PanelForms.Location = new System.Drawing.Point(12, 76);
             this.PanelForms.Name = "PanelForms";
-            this.PanelForms.Size = new System.Drawing.Size(895, 495);
+            this.PanelForms.Size = new System.Drawing.Size(870, 495);
             this.PanelForms.TabIndex = 9;
+            // 
+            // btnUpdates
+            // 
+            this.btnUpdates.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnUpdates.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdates.Image")));
+            this.btnUpdates.ImageActive = null;
+            this.btnUpdates.Location = new System.Drawing.Point(568, 0);
+            this.btnUpdates.Name = "btnUpdates";
+            this.btnUpdates.Size = new System.Drawing.Size(58, 57);
+            this.btnUpdates.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnUpdates.TabIndex = 2;
+            this.btnUpdates.TabStop = false;
+            this.btnUpdates.Zoom = 10;
+            this.btnUpdates.Click += new System.EventHandler(this.btnUpdates_Click);
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(919, 583);
+            this.ClientSize = new System.Drawing.Size(899, 583);
             this.Controls.Add(this.PanelForms);
             this.Controls.Add(this.panel2);
             this.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -120,6 +137,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnWorkbench)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnUpdates)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -131,6 +149,7 @@
         private System.Windows.Forms.Panel panel2;
         private Bunifu.Framework.UI.BunifuImageButton btnWorkbench;
         public System.Windows.Forms.Panel PanelForms;
+        private Bunifu.Framework.UI.BunifuImageButton btnUpdates;
     }
 }
 

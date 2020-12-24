@@ -17,6 +17,7 @@ namespace Jcon_Contact_Tracing
         public WorkBenchForm()
         {
             InitializeComponent();
+            listError.DataSource = DataCollection.Logs;
         }
         // inputCaptured prevent to Add different or change user input on the real search data.
         string inputCaptured = null;
