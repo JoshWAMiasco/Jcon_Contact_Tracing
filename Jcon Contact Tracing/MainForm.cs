@@ -24,20 +24,29 @@ namespace Jcon_Contact_Tracing
         Updates updatesForm = new Updates();
         private void btnWorkbench_Click(object sender, EventArgs e)
         {
-            PanelForms.Controls.Remove(updatesForm);
+            PanelForm.Controls.Remove(updatesForm);
             benchform.TopLevel = false;
-            PanelForms.Controls.Add(benchform);
+            PanelForm.Controls.Add(benchform);
             
             benchform.Show();
         }
 
         private void btnUpdates_Click(object sender, EventArgs e)
         {
-            PanelForms.Controls.Remove(benchform);
+            PanelForm.Controls.Remove(benchform);
             updatesForm.TopLevel = false;
-            PanelForms.Controls.Add(updatesForm);
-            
+            PanelForm.Controls.Add(updatesForm);
             updatesForm.Show();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

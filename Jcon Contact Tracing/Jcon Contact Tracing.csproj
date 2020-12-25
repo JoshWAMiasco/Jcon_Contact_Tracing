@@ -36,7 +36,7 @@
     <Reference Include="Bunifu_UI_v1.5.3">
       <HintPath>..\packages\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
-    <Reference Include="FluentValidation, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0, processorArchitecture=MSIL">
+    <Reference Include="FluentValidation">
       <HintPath>..\packages\FluentValidation.9.3.0\lib\net461\FluentValidation.dll</HintPath>
     </Reference>
     <Reference Include="System" />
