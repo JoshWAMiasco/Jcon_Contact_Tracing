@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>JCT LOGO.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.5.3">
       <HintPath>..\packages\Bunifu_UI_v1.5.3.dll</HintPath>
@@ -129,6 +132,8 @@
       <Name>LTXJconLibrary</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="JCT LOGO.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
