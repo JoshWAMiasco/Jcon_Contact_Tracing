@@ -33,18 +33,18 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panelTab = new System.Windows.Forms.Panel();
-            this.btnUpdates = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btnWorkbench = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnMinimize = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnClose = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnSearch = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnHome = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.bunifuDragControl2 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.PanelForm = new System.Windows.Forms.Panel();
-            this.btnClose = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btnMinimize = new Bunifu.Framework.UI.BunifuImageButton();
             this.panelTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnUpdates)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnWorkbench)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -54,7 +54,7 @@
             this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(210)))), ((int)(((byte)(211)))));
             this.lblTitle.Location = new System.Drawing.Point(22, 17);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(264, 28);
+            this.lblTitle.Size = new System.Drawing.Size(331, 37);
             this.lblTitle.TabIndex = 1;
             this.lblTitle.Text = "JCon Contact Tracing";
             // 
@@ -69,8 +69,8 @@
             // 
             this.panelTab.Controls.Add(this.btnMinimize);
             this.panelTab.Controls.Add(this.btnClose);
-            this.panelTab.Controls.Add(this.btnUpdates);
-            this.panelTab.Controls.Add(this.btnWorkbench);
+            this.panelTab.Controls.Add(this.btnSearch);
+            this.panelTab.Controls.Add(this.btnHome);
             this.panelTab.Controls.Add(this.lblTitle);
             this.panelTab.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTab.Location = new System.Drawing.Point(0, 0);
@@ -78,33 +78,61 @@
             this.panelTab.Size = new System.Drawing.Size(899, 57);
             this.panelTab.TabIndex = 8;
             // 
-            // btnUpdates
+            // btnMinimize
             // 
-            this.btnUpdates.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
-            this.btnUpdates.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdates.Image")));
-            this.btnUpdates.ImageActive = null;
-            this.btnUpdates.Location = new System.Drawing.Point(729, 11);
-            this.btnUpdates.Name = "btnUpdates";
-            this.btnUpdates.Size = new System.Drawing.Size(43, 37);
-            this.btnUpdates.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnUpdates.TabIndex = 2;
-            this.btnUpdates.TabStop = false;
-            this.btnUpdates.Zoom = 10;
-            this.btnUpdates.Click += new System.EventHandler(this.btnUpdates_Click);
+            this.btnMinimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
+            this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
+            this.btnMinimize.ImageActive = null;
+            this.btnMinimize.Location = new System.Drawing.Point(784, 11);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.Size = new System.Drawing.Size(45, 37);
+            this.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnMinimize.TabIndex = 2;
+            this.btnMinimize.TabStop = false;
+            this.btnMinimize.Zoom = 10;
+            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
             // 
-            // btnWorkbench
+            // btnClose
             // 
-            this.btnWorkbench.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
-            this.btnWorkbench.Image = ((System.Drawing.Image)(resources.GetObject("btnWorkbench.Image")));
-            this.btnWorkbench.ImageActive = null;
-            this.btnWorkbench.Location = new System.Drawing.Point(673, 12);
-            this.btnWorkbench.Name = "btnWorkbench";
-            this.btnWorkbench.Size = new System.Drawing.Size(44, 36);
-            this.btnWorkbench.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnWorkbench.TabIndex = 2;
-            this.btnWorkbench.TabStop = false;
-            this.btnWorkbench.Zoom = 10;
-            this.btnWorkbench.Click += new System.EventHandler(this.btnWorkbench_Click);
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
+            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
+            this.btnClose.ImageActive = null;
+            this.btnClose.Location = new System.Drawing.Point(841, 11);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(45, 37);
+            this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnClose.TabIndex = 2;
+            this.btnClose.TabStop = false;
+            this.btnClose.Zoom = 10;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
+            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
+            this.btnSearch.ImageActive = null;
+            this.btnSearch.Location = new System.Drawing.Point(729, 11);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(43, 37);
+            this.btnSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnSearch.TabIndex = 2;
+            this.btnSearch.TabStop = false;
+            this.btnSearch.Zoom = 10;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // btnHome
+            // 
+            this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
+            this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
+            this.btnHome.ImageActive = null;
+            this.btnHome.Location = new System.Drawing.Point(673, 12);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(44, 36);
+            this.btnHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnHome.TabIndex = 2;
+            this.btnHome.TabStop = false;
+            this.btnHome.Zoom = 10;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // bunifuDragControl1
             // 
@@ -129,37 +157,9 @@
             this.PanelForm.Size = new System.Drawing.Size(899, 526);
             this.PanelForm.TabIndex = 9;
             // 
-            // btnClose
-            // 
-            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
-            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
-            this.btnClose.ImageActive = null;
-            this.btnClose.Location = new System.Drawing.Point(841, 11);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(45, 37);
-            this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnClose.TabIndex = 2;
-            this.btnClose.TabStop = false;
-            this.btnClose.Zoom = 10;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // btnMinimize
-            // 
-            this.btnMinimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
-            this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
-            this.btnMinimize.ImageActive = null;
-            this.btnMinimize.Location = new System.Drawing.Point(784, 11);
-            this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(45, 37);
-            this.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnMinimize.TabIndex = 2;
-            this.btnMinimize.TabStop = false;
-            this.btnMinimize.Zoom = 10;
-            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
-            // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(58)))), ((int)(((byte)(71)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
@@ -175,10 +175,10 @@
             this.Text = "Jcon Contact Tracing";
             this.panelTab.ResumeLayout(false);
             this.panelTab.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnUpdates)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnWorkbench)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -187,8 +187,8 @@
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.Panel panelTab;
-        private Bunifu.Framework.UI.BunifuImageButton btnWorkbench;
-        private Bunifu.Framework.UI.BunifuImageButton btnUpdates;
+        private Bunifu.Framework.UI.BunifuImageButton btnHome;
+        private Bunifu.Framework.UI.BunifuImageButton btnSearch;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl2;
         private System.Windows.Forms.Panel PanelForm;

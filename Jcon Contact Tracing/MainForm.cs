@@ -22,22 +22,6 @@ namespace Jcon_Contact_Tracing
         }
         WorkBenchForm benchform = new WorkBenchForm();
         Updates updatesForm = new Updates();
-        private void btnWorkbench_Click(object sender, EventArgs e)
-        {
-            PanelForm.Controls.Remove(updatesForm);
-            benchform.TopLevel = false;
-            PanelForm.Controls.Add(benchform);
-            
-            benchform.Show();
-        }
-
-        private void btnUpdates_Click(object sender, EventArgs e)
-        {
-            PanelForm.Controls.Remove(benchform);
-            updatesForm.TopLevel = false;
-            PanelForm.Controls.Add(updatesForm);
-            updatesForm.Show();
-        }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
@@ -47,6 +31,22 @@ namespace Jcon_Contact_Tracing
         private void btnMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            PanelForm.Controls.Remove(benchform);
+            updatesForm.TopLevel = false;
+            PanelForm.Controls.Add(updatesForm);
+            updatesForm.Show();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            PanelForm.Controls.Remove(updatesForm);
+            benchform.TopLevel = false;
+            PanelForm.Controls.Add(benchform);
+            benchform.Show();
         }
     }
 }
