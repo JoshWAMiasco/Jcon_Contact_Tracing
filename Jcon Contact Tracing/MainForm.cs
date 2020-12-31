@@ -48,5 +48,12 @@ namespace Jcon_Contact_Tracing
             PanelForm.Controls.Add(benchform);
             benchform.Show();
         }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            updatesForm.TopLevel = false;
+            PanelForm.Controls.Add(updatesForm);
+            updatesForm.Show();
+        }
     }
 }

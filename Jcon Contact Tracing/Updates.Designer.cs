@@ -76,7 +76,7 @@ namespace Jcon_Contact_Tracing
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.label1.Location = new System.Drawing.Point(303, 61);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(584, 40);
+            this.label1.Size = new System.Drawing.Size(461, 32);
             this.label1.TabIndex = 1;
             this.label1.Text = "Welcome To Jcon Contact Tracing";
             // 
@@ -87,7 +87,7 @@ namespace Jcon_Contact_Tracing
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.label2.Location = new System.Drawing.Point(309, 134);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(406, 66);
+            this.label2.Size = new System.Drawing.Size(323, 60);
             this.label2.TabIndex = 1;
             this.label2.Text = "Say Goodbye to Traditional Way of Tracing\r\nCotact on Jconnector on Back Plane.\r\nJ" +
     "CT Helps you on Documentation with ease";
@@ -99,7 +99,7 @@ namespace Jcon_Contact_Tracing
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.label3.Location = new System.Drawing.Point(43, 301);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 23);
+            this.label3.Size = new System.Drawing.Size(63, 18);
             this.label3.TabIndex = 1;
             this.label3.Text = "Version";
             // 
@@ -110,7 +110,7 @@ namespace Jcon_Contact_Tracing
             this.lblVersion.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.lblVersion.Location = new System.Drawing.Point(126, 301);
             this.lblVersion.Name = "lblVersion";
-            this.lblVersion.Size = new System.Drawing.Size(56, 22);
+            this.lblVersion.Size = new System.Drawing.Size(44, 20);
             this.lblVersion.TabIndex = 1;
             this.lblVersion.Text = "X.X.X";
             // 
@@ -202,6 +202,7 @@ namespace Jcon_Contact_Tracing
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(122, 113);
             this.btnUpdate.TabIndex = 2;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // label4
             // 
@@ -210,7 +211,7 @@ namespace Jcon_Contact_Tracing
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.label4.Location = new System.Drawing.Point(737, 319);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(121, 22);
+            this.label4.Size = new System.Drawing.Size(96, 20);
             this.label4.TabIndex = 1;
             this.label4.Text = "Start Search";
             // 
@@ -221,7 +222,7 @@ namespace Jcon_Contact_Tracing
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.label5.Location = new System.Drawing.Point(737, 389);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(97, 22);
+            this.label5.Size = new System.Drawing.Size(77, 20);
             this.label5.TabIndex = 1;
             this.label5.Text = "Add Item";
             // 
@@ -232,7 +233,7 @@ namespace Jcon_Contact_Tracing
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.label6.Location = new System.Drawing.Point(737, 453);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(107, 22);
+            this.label6.Size = new System.Drawing.Size(86, 20);
             this.label6.TabIndex = 1;
             this.label6.Text = "Save Note";
             // 
@@ -243,7 +244,7 @@ namespace Jcon_Contact_Tracing
             this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.label7.Location = new System.Drawing.Point(208, 356);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(226, 44);
+            this.label7.Size = new System.Drawing.Size(179, 40);
             this.label7.TabIndex = 1;
             this.label7.Text = "Send Us Feedback\r\nto make this app better";
             // 
@@ -271,6 +272,7 @@ namespace Jcon_Contact_Tracing
             this.btnSendFeedback.Size = new System.Drawing.Size(222, 67);
             this.btnSendFeedback.TabIndex = 3;
             this.btnSendFeedback.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnSendFeedback.Click += new System.EventHandler(this.btnSendFeedback_Click);
             // 
             // label8
             // 
@@ -279,7 +281,7 @@ namespace Jcon_Contact_Tracing
             this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.label8.Location = new System.Drawing.Point(669, 248);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(126, 34);
+            this.label8.Size = new System.Drawing.Size(99, 26);
             this.label8.TabIndex = 1;
             this.label8.Text = "Controls";
             // 

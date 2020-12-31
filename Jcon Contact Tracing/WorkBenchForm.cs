@@ -34,8 +34,15 @@ namespace Jcon_Contact_Tracing
 
             if (e.Control && e.KeyCode == Keys.A)
             {
-                ProcessItem.AddToDataCollection(inputCaptured.ToUpper(), lblResult.Text);
-                lstboxSearchItems.Items.Add(DataCollection.SearchItem[DataCollection.SearchItem.Count - 1]);
+                if(lblResult.Text == "Result" )
+                {
+                    DataCollection.Logs.Add("Please Search Item Before Add");
+                }
+                else
+                {
+                    ProcessItem.AddToDataCollection(inputCaptured.ToUpper(), lblResult.Text);
+                    lstboxSearchItems.Items.Add(DataCollection.SearchItem[DataCollection.SearchItem.Count - 1]);
+                }
             }
         }
 

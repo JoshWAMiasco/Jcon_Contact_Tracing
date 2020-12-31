@@ -25,17 +25,25 @@ namespace Jcon_Contact_Tracing
             }
             else
             {
-                string username = Environment.UserName;
-                string textFilePath = @"C:\Users\Username\Desktop\TextFileName.txt".Replace("Username", username).Replace("TextFileName", txtboxTitle.Text);
-                Datalogs.GenerateTextFile(
-                                            location: textFilePath,
-                                            title: txtboxTitle.Text,
-                                            dietype: txtboxDieType.Text,
-                                            devicename: txtboxDeviceName.Text,
-                                            author: txtboxAuthor.Text
-                                          );
-                File.SetAttributes(textFilePath, FileAttributes.ReadOnly);
-                this.Close();
+                SaveFileDialog savefile = new SaveFileDialog();
+                savefile.Title = "Save This Documention";
+                savefile.InitialDirectory = @"C:\Users\username\Desktop".Replace("username", Environment.UserName);
+                savefile.DefaultExt = "txt";
+                savefile.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+                if (savefile.ShowDialog() == DialogResult.OK)
+                {
+                    string username = Environment.UserName;
+                    string textFilePath = savefile.FileName;
+                    Datalogs.GenerateTextFile(
+                                                location: textFilePath,
+                                                title: txtboxTitle.Text,
+                                                dietype: txtboxDieType.Text,
+                                                devicename: txtboxDeviceName.Text,
+                                                author: txtboxAuthor.Text
+                                              );
+                    File.SetAttributes(textFilePath, FileAttributes.ReadOnly);
+                    this.Close();
+                }
             }
         }
 
