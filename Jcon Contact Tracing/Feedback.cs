@@ -50,9 +50,9 @@ namespace Jcon_Contact_Tracing
                     }
                 }
             }
-
-            this.Close();
             MessageBox.Show("Thank you!");
+            this.Hide();
+            
         }
     }
 }
