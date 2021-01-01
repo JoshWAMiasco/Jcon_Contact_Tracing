@@ -22,7 +22,7 @@ namespace Jcon_Contact_Tracing
 
         private async Task CheckForupdate()
         {
-            using (var manager = new UpdateManager(@"\\maxcavte01\TSG\Z_TSG_Joshua_DONOTDELETE\"))
+            using (var manager = new UpdateManager(@"\\maxcavte01\TSG\Z_TSG_Joshua_DoNotDelete\Software Releases\Jcon Contact Tracing"))
             {
                 await manager.UpdateApp();
             }

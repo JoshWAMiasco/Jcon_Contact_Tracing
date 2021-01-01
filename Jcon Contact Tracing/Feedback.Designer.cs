@@ -32,11 +32,11 @@ namespace Jcon_Contact_Tracing
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Feedback));
             this.Panel = new System.Windows.Forms.Panel();
-            this.btnClose = new Bunifu.Framework.UI.BunifuImageButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnClose = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.bunifuDragControl2 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtFeedback = new System.Windows.Forms.TextBox();
             this.btnSend = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.Panel.SuspendLayout();
@@ -54,6 +54,17 @@ namespace Jcon_Contact_Tracing
             this.Panel.Size = new System.Drawing.Size(428, 59);
             this.Panel.TabIndex = 0;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(12, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(156, 23);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "How\'s My App ?";
+            // 
             // btnClose
             // 
             this.btnClose.BackColor = System.Drawing.Color.Black;
@@ -67,17 +78,6 @@ namespace Jcon_Contact_Tracing
             this.btnClose.TabStop = false;
             this.btnClose.Zoom = 10;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(12, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(156, 23);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "How\'s My App ?";
             // 
             // bunifuDragControl1
             // 
@@ -93,15 +93,15 @@ namespace Jcon_Contact_Tracing
             this.bunifuDragControl2.TargetControl = this.label1;
             this.bunifuDragControl2.Vertical = true;
             // 
-            // textBox1
+            // txtFeedback
             // 
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(0, 59);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(428, 294);
-            this.textBox1.TabIndex = 1;
+            this.txtFeedback.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtFeedback.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFeedback.Location = new System.Drawing.Point(0, 59);
+            this.txtFeedback.Multiline = true;
+            this.txtFeedback.Name = "txtFeedback";
+            this.txtFeedback.Size = new System.Drawing.Size(428, 294);
+            this.txtFeedback.TabIndex = 1;
             // 
             // btnSend
             // 
@@ -127,6 +127,7 @@ namespace Jcon_Contact_Tracing
             this.btnSend.IconZoom = 90D;
             this.btnSend.IsTab = false;
             this.btnSend.Location = new System.Drawing.Point(316, 287);
+            this.btnSend.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnSend.Name = "btnSend";
             this.btnSend.Normalcolor = System.Drawing.Color.White;
             this.btnSend.OnHovercolor = System.Drawing.Color.Silver;
@@ -138,6 +139,7 @@ namespace Jcon_Contact_Tracing
             this.btnSend.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSend.Textcolor = System.Drawing.Color.Black;
             this.btnSend.TextFont = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
             // 
             // bunifuElipse1
             // 
@@ -151,7 +153,7 @@ namespace Jcon_Contact_Tracing
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(40)))), ((int)(((byte)(49)))));
             this.ClientSize = new System.Drawing.Size(428, 353);
             this.Controls.Add(this.btnSend);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtFeedback);
             this.Controls.Add(this.Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Feedback";
@@ -172,7 +174,7 @@ namespace Jcon_Contact_Tracing
         private Bunifu.Framework.UI.BunifuImageButton btnClose;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtFeedback;
         private Bunifu.Framework.UI.BunifuFlatButton btnSend;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
     }
